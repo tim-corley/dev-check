@@ -68,6 +68,6 @@ jobs:
           # This creates a release and names it after the tag that triggered the workflow
           tag_name: ${{ github.ref_name }}
           # This uses the commit message of the tagged commit as the release body
-          body_path: ${{ github.event.head_commit.message }}
+          body: ${{ github.event.head_commit.message }}
           # The `files` property is a glob pattern for the files to upload as assets
           files: "artifacts/**/*"
